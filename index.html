@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>친구 별명 생성기</title>
+
+  <!-- CSS 초기화 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Neo둥근모 폰트 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Dalgona/neodgm-webfont@1.521/neodgm/style.css">
+
+  <script src="./js/josa.js"></script>  
+  <script src="./js/contents.js"></script>  
+  <script src="./js/example.js"></script>
+
+  <script defer src="./js/common.js"></script>
+  <script defer src="./js/generate.js"></script>
+
+</head>
+
+<body class="preload">
+
+  <div class="container">
+
+    <div class="hero">
+      <h1>친구 별명 생성기</h1>
+      <p>랜덤으로 친구 별명을 생성합니다.</p>
+    </div>
+
+    <div class="form">
+      <form action="" autocomplete="off">
+        
+        <div class="wrapper">
+          <div class="form-8bit">
+            <div class="form-8bit-wrapper">
+              <input 
+                class="form-component input light-dark" 
+                type="text" 
+                name="location"
+                id="location" 
+                placeholder="거주지(선택)">
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="form-8bit">
+            <div class="form-8bit-wrapper">
+              <input 
+                class="form-component input light-dark"
+                type="text" 
+                name="name"
+                id="name" 
+                placeholder="이름">
+            </div>
+          </div>
+        </div>
+
+        <div style="display: inline-block;">
+          <label for="is-limited">
+            <div class="wrapper checkboxlabeler">
+              <div id="is-limited-wrapper" class="form-8bit">
+                <div class="form-8bit-wrapper">
+                  <input id="is-limited" class="checkboxlabeler-input" type="checkbox">
+                </div>
+              </div>
+            </div>
+            <p class="checkboxlabeler" id="is-limited-alerter">글자수 제한</p>
+          </label>
+          <div class="wrapper" id="is-limited-num">
+            <div class="form-8bit">
+              <div class="form-8bit-wrapper">
+                <input 
+                  class="form-component input light-dark" 
+                  type="number"
+                  name="is-limited-num" 
+                  id="is-limited-num-input" 
+                  placeholder="N자리"
+                  onchange="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="form-8bit">
+            <div class="form-8bit-wrapper">
+              <div class="form-component button"
+                onclick="generate(document.getElementById('name').value, document.getElementById('location').value, 'result')">
+                생성!
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="wrapper">
+      <p class="result" id="result">생성 버튼을 누르면 여기에 결과가 표시됩니다.</p>
+    </div>
+
+    <hr>
+
+    <div class="example">
+      <p>어떤 이름이 나올까?</p>
+      <div class="input-example light-dark" id="example-location">연신내</div>
+      <div class="input-example light-dark" id="example-name">격겜진상손님</div> →      
+      <div class="input-example light-dark" id="example-result">연신내격겜진상손님김케인</div>
+    </div>
+  </div>
+
+  <div class="github-wrapper">
+    <div class="form-8bit">
+      <div class="form-8bit-wrapper">
+        <div class="github">
+          <a href="javascript(0)" target="_blank">누군가의 작은 저장소</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
