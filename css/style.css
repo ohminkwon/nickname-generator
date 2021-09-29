@@ -156,20 +156,3 @@ div.input-example {
   border-radius: 5px;
   margin-top: 10px;
 }
-
-.github-wrapper {
-  position: fixed;
-  z-index: 5;
-  background-color: rgb(56, 56, 56);
-  right: 25px;
-  bottom: 25px;
-}
-
-.github {
-  padding: 5px;
-}
-
-.github a {
-  color: rgb(231, 231, 231);
-  text-decoration: none;
-}
